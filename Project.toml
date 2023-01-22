@@ -1,0 +1,8 @@
+name = "Dice"
+uuid = "945dc27a-a91b-432e-a4dc-609b56da0f0c"
+authors = ["derpi <andrew.hale003@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
