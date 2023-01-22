@@ -46,9 +46,9 @@ end
 
 function grid(N, t, e)
     if e 
-        string = @sprintf "grid -- success minimum value=%i exploding=%i method=monte carlo simulation size=%i\n" t e N
+        string = @sprintf "grid -- success minimum value=%i exploding=%i method=monte carlo simulation size=%i  \n" t e N
     else 
-        string = @sprintf "grid -- success minimum value=%i exploding=%i method=exact calculation\n" t e
+        string = @sprintf "grid -- success minimum value=%i exploding=%i method=exact calculation  \n" t e
     end
 
     for s ∈ 1:10
@@ -63,14 +63,14 @@ function grid(N, t, e)
                 string *= @sprintf "%6.2f  " expected_success(d, t, e)
             end
         end
-        string *= "\n"
+        string *= "  \n"
     end
-    string *= "\n"
+    string *= "  \n"
     string
 end
 
 function write_to_file()
-    filename = "README.md"
+    filename = "output.txt"
     rm(filename, force=true)
     N = 10_000
     for e ∈ [false, true]
